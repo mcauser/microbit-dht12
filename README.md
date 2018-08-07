@@ -13,7 +13,7 @@ My Kitronik edge connector breakout board does not have pin headers soldered for
 
 Basic measurement
 
-```
+```python
 from microbit import *
 import dht12
 
@@ -27,7 +27,7 @@ print(sensor.humidity())
 
 Press Button A to measure, Button B to exit
 
-```
+```python
 from microbit import *
 import dht12
 
@@ -48,7 +48,7 @@ while True:
 
 Continuous measurement
 
-```
+```python
 from microbit import *
 import dht12
 
@@ -74,3 +74,7 @@ while True:
 * [micropython.org](http://micropython.org)
 * [micro:bit on the MicroPython forum](https://forum.micropython.org/viewforum.php?f=17)
 * [MicroPython DHT12](https://github.com/mcauser/micropython-dht12)
+
+## License
+
+Licensed under the [MIT License](http://opensource.org/licenses/MIT).
