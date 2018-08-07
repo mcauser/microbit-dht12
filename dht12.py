@@ -24,7 +24,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-import time
+from time import sleep_ms
 
 class DHT12:
     def __init__(self, i2c, address=0x5c):
@@ -33,7 +33,7 @@ class DHT12:
         self.buf = bytearray(5)
     def measure(self):
         self.i2c.write(0x5c, b'\x00')
-        time.sleep_ms(2)
+        sleep_ms(2)
         buf = self.i2c.read(self.address, 5)
         if (buf[0] + buf[1] + buf[2] + buf[3]) & 0xff != buf[4]:
             raise Exception("checksum error")
